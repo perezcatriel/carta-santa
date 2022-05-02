@@ -1,15 +1,4 @@
-import { saludo } from "./enviar.mjs";
-
-console.log(saludo);
-
-const enviar = document.querySelector('#carta-a-santa').onclick = () => {
-	manejarErrores();
-	submit();
-
-	event.preventDefault();
-}
-
-function manejarErrores() {
+export function manejarErrores() {
 	const $errores = document.querySelectorAll(".error-mensaje");
 
 	if ($errores.length) {
@@ -103,4 +92,3 @@ function submit() {
 		},2000)
 	}
 }
-
